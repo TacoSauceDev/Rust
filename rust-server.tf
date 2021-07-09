@@ -8,6 +8,9 @@ resource "digitalocean_droplet" "rust_pve_dev" {
     size = "s-1vcpu-1gb"
     private_networking = true
     user_data = data.template_file.user_data.rendered
+    lifecycle {
+    create_before_destroy = true
+  }
 }
 
 
