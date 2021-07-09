@@ -21,3 +21,29 @@ resource "digitalocean_floating_ip_assignment" "rust_floating_ip_assignment" {
   ip_address = digitalocean_floating_ip.rust_floating_ip.ip_address
   droplet_id = digitalocean_droplet.rust_pve_dev.id
 }
+
+resource "digitalocean_volume" "rust_config_volume" {
+  region                  = "nyc1"
+  name                    = "rust_config_volume"
+  size                    = 1
+  initial_filesystem_type = "ext4"
+  description             = "RustConfigData"
+}
+
+resource "digitalocean_volume" "rust_player_volume" {
+  region                  = "nyc1"
+  name                    = "rust_player_volume"
+  size                    = 5
+  initial_filesystem_type = "ext4"
+  description             = "Rust Player Data"
+}
+
+resource "digitalocean_volume_attachment" "rust_config_volume_attach" {
+  droplet_id = digitalocean_droplet.rust_pve_dev.id
+  volume_id  = digitalocean_volume.rust_config_volume.id
+}
+
+resource "digitalocean_volume_attachment" "rust_player_volume_attach" {
+  droplet_id = digitalocean_droplet.rust_pve_dev.id
+  volume_id  = digitalocean_volume.rust_player_volume.id
+}
