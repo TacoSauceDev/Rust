@@ -12,5 +12,12 @@ resource "digitalocean_droplet" "rust_pve_dev" {
     create_before_destroy = true
   }
 }
+resource "digitalocean_floating_ip" "rust_floating_ip" {
+  droplet_id = digitalocean_droplet.rust_pve_dev.id
+  region     = digitalocean_droplet.rust_pve_dev.region
+}
 
-
+resource "digitalocean_floating_ip_assignment" "rust_floating_ip_assignment" {
+  ip_address = digitalocean_floating_ip.rust_floating_ip.ip_address
+  droplet_id = digitalocean_droplet.rust_pve_dev.id
+}
