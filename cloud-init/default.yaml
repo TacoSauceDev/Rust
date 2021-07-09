@@ -1,0 +1,21 @@
+#cloud-config
+
+# Update apt database on first boot (run 'apt-get update').
+# Note, if packages are given, or package_upgrade is true, then
+# update will be done independent of this setting.
+#
+# Default: false
+# Aliases: apt_update
+package_update: true
+
+# Upgrade the instance on first boot
+# (ie run apt-get upgrade)
+#
+# Default: false
+# Aliases: apt_upgrade
+package_upgrade: true
+
+# add each entry to ~/.ssh/authorized_keys for the configured user or the
+# first user defined in the user definition directive.
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCvAHjoWLsT3jPMoiYw9LeL+qEKm5iuTndzOhN61vGjvABCv2mXzZp0Ys3QZsD0C2BM+S//2HM3HCEZodTsJ4O4gvOIkE69VxBDNAwQk7q2HJSo4V4z1vkEv2VN4uRPMOazN7wEdIMn+yzoQkmFTda8BxzMgIc5QZBWazepdYy0jBmU7JaowBhHAmNzRDbScrY8O6rvilfFpdXRSoDsSVVsictsVXf1kmJ7xUGVOhUUbUoQmLyEwoaHV3enOH/bmU3iqUjTAfLPIpUcYNHhWfdAo1A+y85ZgYZgGuPhwAhl6UWBDXIJoxJKMmS4Emu6OBKcxlBbDbr+dZZcgcBQr2KXKsItFWuPPL0qykVHV5GXIUHKfhTBhICQ+b8PuOxYDxcYWs2nG6D8SDK8oTX6KjXl6o8YKADea6loHtJuFtMtz4FHle8pjWwfVALBCOOcaPmNTpAu2+rlbUbF6C0OJc2HrJ/q4vOxKIWI/BGiJw1xvro1HHc2IIaiFDpJBZ/KvE8= root@DESKTOP-IUENACA
