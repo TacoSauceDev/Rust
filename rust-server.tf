@@ -24,7 +24,7 @@ resource "digitalocean_floating_ip_assignment" "rust_floating_ip_assignment" {
 
 resource "digitalocean_volume" "rust_config_volume" {
   region                  = "nyc1"
-  name                    = "rust_config_volume"
+  name                    = "rustconfigvolume"
   size                    = 1
   initial_filesystem_type = "ext4"
   description             = "RustConfigData"
@@ -32,7 +32,7 @@ resource "digitalocean_volume" "rust_config_volume" {
 
 resource "digitalocean_volume" "rust_player_volume" {
   region                  = "nyc1"
-  name                    = "rust_player_volume"
+  name                    = "rustplayervolume"
   size                    = 5
   initial_filesystem_type = "ext4"
   description             = "Rust Player Data"
