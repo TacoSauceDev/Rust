@@ -25,7 +25,7 @@ resource "digitalocean_floating_ip_assignment" "rust_floating_ip_assignment" {
 resource "digitalocean_volume" "rust_config_volume" {
   region                  = "nyc1"
   name                    = "rustconfigvolume"
-  size                    = 1
+  size                    = 2
   initial_filesystem_type = "ext4"
   description             = "RustConfigData"
 }
