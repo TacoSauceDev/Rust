@@ -1,6 +1,6 @@
 name: Generate terraform docs
 on:
-  - pull_request
+  - push
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -16,3 +16,4 @@ jobs:
         output-file: USAGE.md
         output-method: inject
         git-push: "true"
+        
