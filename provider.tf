@@ -1,3 +1,4 @@
+# Testing automation with comment
 terraform {
   required_providers {
     digitalocean = {
