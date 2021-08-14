@@ -33,7 +33,7 @@ jobs:
           # Name of terraform-docs config file. To enable, provide the file name (e.g. `.terraform-docs.yml`)
           config-file: # optional, default is disabled
           # Comma separated list of directories to generate docs for (ignored if `atlantis-file` or `find-dir` is set)
-          working-dir: # optional, default is .
+          working-dir: ../ # optional, default is .
           # Name of Atlantis file to extract list of directories by parsing it. To enable, provide the file name (e.g. `atlantis.yaml`)
           atlantis-file: # optional, default is disabled
           # Name of root directory to extract list of directories by running `find ./find_dir -name *.tf` (ignored if `atlantis-file` is set)
