@@ -47,8 +47,6 @@ jobs:
           # When provided will be used as the template if/when the `output-file` does not exist
           template: # optional, default is # Usage
 
-      <!--- BEGIN_TF_DOCS --->
-      <!--- END_TF_DOCS --->
 
           # Additional arguments to pass to the command (see [full documentation](https://github.com/terraform-docs/terraform-docs/tree/master/docs))
           args: # optional, default is 
